@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+/* Fonts */
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Playfair Display",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #0c0b09; /* Background color for the entire website, including individual sections */
+  --default-color: rgba(255, 255, 255, 0.7); /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #cda45e; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #29261f; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #0c0b09; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #ffffff;  /* The default color of the main navmenu links */
+  --nav-hover-color: #cda45e; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #353533; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #29261f; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #cda45e; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #29261f;
+  --surface-color: #464135;
+}
+
+.dark-background {
+  --background-color: #000000;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #1a1a1a;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+/************************ NAVBAR SECTION STYLING STARTS **************************************/
+.navbar{
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5) url(/hero-bg.jpg);
+  background-blend-mode: darken;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.navmenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  width: 100%;
+  background-color: var(--background-color);
+  color: var(--nav-color);
+  padding: 8px 32px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  position: fixed;
+  
+}
+.logo{
+  width: 70px;
+  height: 70px;
+  text-align: center;
+}
+.navmenu ul {
+  display: flex;
+  overflow-y: auto;
+  transition: 0.3s;
+
+}
+.navmenu ul li a{
+  text-decoration: none;
+  color: var(--nav-color);
+  padding: 10px 15px;
+  font-size: 15px;
+  font-family: var(--nav-font);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navmenu li:hover>a,
+.navmenu .active,
+.navmenu .active:focus {
+    color: var(--nav-hover-color);
+}
+.sign a{
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+/************************ NAVBAR SECTION STYLING ENDS **************************************/
+
+/************************ HERO SECTION STYLING STARTS **************************************/
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+.hero section {
+  width: 100%;
+  height: 100vh;
+  background-blend-mode: darken;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+.hero section h4 {
+  color: #dc582a;
+  font-size: 32px;
+  font-weight: 500;
+}
+.hero section h2 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  width: 450px;
+}
+.hero section p {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+}
+@media (max-width: 1050px) {
+  .hero section {
+    padding-left: 40px;
+  }
+}
+@media (max-width: 666px) {
+  .hero section {
+    padding-left: 20px;
+  }
+  .hero section h4 {
+    font-size: 26px;
+  }
+  .hero section h2 {
+    font-size: 32px;
+    width: 100%;
+  }
+  .hero section p {
+    font-size: 20px;
+  }
+  body {
+    padding: 30px 20px 20px 20px;
+  }
+}
+
+/************************ HERO SECTION STYLING ENDS **************************************/
+
+/************************ RECIPES SECTION STYLING STARTS **************************************/
+.recipes {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin: 35px 0;
+}
+.recipes section:first-child {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.recipes section:first-child button {
+  width: 280px;
+  padding: 25px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.recipes section:first-child button:first-child {
+  background-color: #dc582a;
+}
+.recipes section:first-child button:nth-child(2) {
+  background-color: #c4d600;
+}
+.recipes section:first-child button:nth-child(3) {
+  background-color: #eaaa00;
+}
+.recipes section:first-child button:nth-child(4) {
+  background-color: #ed8b00;
+}
+.recipes section:first-child button:last-child {
+  background-color: #84bd00;
+}
+
+.recipes .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 40px;
+}
+.recipes .container .card {
+  text-decoration: none;
+}
+.recipes .container .card img {
+  width: 100%;
+  height: 260px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.recipes .container .card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+}
+.recipes .container .card h4:last-child {
+  font-size: 20px;
+  font-weight: 600;
+  color: #dc582a;
+}
+.recipes h3 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+@media (max-width: 840px) {
+  .recipes .container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+@media (max-width: 699px) {
+  .recipes .container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+@media (max-width: 620px) {
+  .recipes section:first-child button {
+    width: 100%;
+  }
+}
+/************************ RECIPES SECTION STYLING ENDS **************************************/
+
+/************************ FOOTER SECTION STYLING STARTS **************************************/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-top: 1px solid gray;
+  gap: 25px;
+}
+footer a {
+  text-decoration: none;
+  font-size: 27px;
+}
+footer a:first-child {
+  color: blue;
+}
+footer a:nth-child(2) {
+  color: red;
+}
+footer a:nth-child(3) {
+  color: #0077b5;
+}
+footer a:last-child {
+  color: pink;
+}
+
+/************************ FOOTER SECTION STYLING ENDS **************************************/
+
+/************************ RECIPE DETAILS SECTION STYLING STARTS **************************************/
+.recipe-details {
+  min-height: 810px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.recipe-details img {
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.recipe-details h1 {
+  margin-bottom: 10px;
+}
+.recipe-details p {
+  margin-bottom: 35px;
+  color: gray;
+  font-size: 20px;
+}
+.recipe-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+.recipe-details div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: inside;
+  font-size: 20px;
+}
+.recipe-details h5 {
+  color: #dc582a;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+/************************ RECIPE DETAILS SECTION STYLING ENDS **************************************/
+
+/************************ ABOUT SECTION STYLING STARTS **************************************/
+.about {
+  min-height: 733px;
+}
+.about h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  color: rgb(0, 0, 37);
+  margin-bottom: 35px;
+}
+.about p {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: gray;
+}
+/************************ ABOUT SECTION STYLING ENDS **************************************/
