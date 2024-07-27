@@ -32,7 +32,7 @@ const Home = () => {
                                 </div> */}
                                 
                             </div>
-                            <a href="/" className="btn btn-primary py-2 px-4">Book A Table</a>
+                            <Link to="/signup" className="btn btn-primary py-2 px-4">Sign Up</Link>
                         </div>
                     </nav>
 

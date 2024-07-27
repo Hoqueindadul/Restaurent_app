@@ -255,15 +255,55 @@
   border-radius: 38px 38px 0 0;
 }
 
+/* signup page design */
+
+.container-xxl #nab{
+  background-color: #0F172B;
+}
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/about-2.jpg');
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+#frm{
+  border: 3px solid #0F172B;
+  padding: 23px;
+  border-radius: 10px;
+  height: 70vh;
+  background-color: var(--dark);
+  box-shadow: -1px 1px 5px 3px var(--primary);
+  width: 30%;
+}
+.heading{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+.heading span{
+  color: var(--primary);
+}
+.items{
+  padding: 12px;
+}
 
 #btn{
-  background-color: #6f7072;
+  background-color: var(--dark);
   border: 2px solid rgba(97, 95, 95, 0.75);
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: -1px 1px 5px 3px rgba(112, 110, 110, 0.75);
   display: flex;
   margin: auto;
   align-items: center;
+  margin-top: 14px;
 }
 
 
