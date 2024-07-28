@@ -8,7 +8,7 @@ const Menu = () => {
             <div className="container-xxl bg-white p-0">
                 {/* Navbar & Hero Start */}
                 <div className="container-xxl position-relative p-0">
-                    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-4 px-lg-5 py-3 py-lg-0">
                         <Link to="/" className="navbar-brand p-0">
                             <img src="/logo.png" alt="Logo" />
                         </Link>
@@ -31,7 +31,7 @@ const Menu = () => {
                                     </div>
                                 </div> */}
                             </div>
-                            <a href="" className="btn btn-primary py-2 px-4">Book A Table</a>
+                            <Link to="/signup" className="btn btn-primary py-2 px-4">Sign Up</Link>
                         </div>
                     </nav>
 

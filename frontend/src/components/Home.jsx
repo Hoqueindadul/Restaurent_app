@@ -8,7 +8,7 @@ const Home = () => {
             <div className="container-xxl bg-white p-0">
                 {/* Navbar & Hero Start */}
                 <div className="container-xxl position-relative p-0">
-                    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                    <nav className="navbar navbar-expand-lg sticky-top spacer navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0" id='holearea'>
                         <Link to="/" className="navbar-brand p-0">
                             <img src="/logo.png" alt="Logo" />
                         </Link>
@@ -801,9 +801,7 @@ const Home = () => {
                     <div className="row g-0">
                         <div className="col-md-6">
                             <div className="video">
-                                <button type="button" className="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                                    <span></span>
-                                </button>
+                                <img src="/about-2.jpg" alt="image" />
                             </div>
                         </div>
                         <div className="col-md-6 bg-dark d-flex align-items-center">
@@ -856,22 +854,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="modal fade" id="videoModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog">
-                        <div className="modal-content rounded-0">
-                            <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalLabel">Youtube Video</h5>
-                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div className="modal-body">
-                                {/* 16:9 aspect ratio */}
-                                <div className="ratio ratio-16x9">
-                                    <iframe className="embed-responsive-item" src="" id="video" allowFullScreen allow="autoplay"></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 {/* <Reservation End */}
 
                 {/* Team Start */}

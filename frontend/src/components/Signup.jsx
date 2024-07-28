@@ -5,9 +5,15 @@ import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 
 export const Signup = () => {
+    const [formData, setFormData] = useState({
+        username: '',
+        email: '',
+        password: ''
+    });
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [showPopup, setShowPopup] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,19 +23,27 @@ export const Signup = () => {
             email,
             password
         })
-        .then(response => {
-            console.log(response.data);
-        })
-        .catch(error => {
-            console.error('There was an error!', error);
-        });
+            .then(response => {
+                console.log(response.data);
+                setUsername('');
+                setEmail('');
+                setPassword('');
+
+                // Show success popup
+                setShowPopup(true);
+                // Hide popup after 3 seconds
+                setTimeout(() => setShowPopup(false), 3000);
+            })
+            .catch(error => {
+                console.error('There was an error!', error);
+            });
     };
 
     return (
         <div className="container-xxl bg-white p-0">
             {/* Navbar */}
             <div className="container-xxl position-relative p-0 " id='nab'>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-4 px-lg-5 py-3 py-lg-0">
                     <Link to="/" className="navbar-brand p-0">
                         <img src="/logo.png" alt="Logo" />
                     </Link>
@@ -52,7 +66,7 @@ export const Signup = () => {
             {/* Form structure */}
             <div className='form-container'>
                 <Form id="frm" onSubmit={handleSubmit}>
-                <h2 className='heading'>Sign <span>Up</span></h2>
+                    <h2 className='heading'>Sign <span>Up</span></h2>
                     <Form.Group controlId="formUsername" className='items'>
                         <Form.Label>Username</Form.Label>
                         <Form.Control
@@ -87,6 +101,11 @@ export const Signup = () => {
                         Sign Up
                     </Button>
                 </Form>
+                {showPopup && (
+                    <div className="popup">
+                        Signup successful!
+                    </div>
+                )}
             </div>
         </div>
     );
