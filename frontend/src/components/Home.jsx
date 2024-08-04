@@ -41,7 +41,7 @@ const Home = () => {
                             <div className="row align-items-center g-5">
                                 <div className="col-lg-6 text-center text-lg-start">
                                     <h1 className="display-3 text-white animated slideInLeft">Enjoy Our<br />Delicious Meal</h1>
-                                    <p className="text-white animated slideInLeft mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                                    <p className="text-white animated slideInLeft mb-4 pb-2">Welcome to Local restaurent, where we serve delicious meals in a cozy setting. Enjoy our chef's special dishes made with fresh ingredients. Come and have a wonderful dining experience with us.</p>
                                     <a href="/" className="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
                                 </div>
                                 <div className="col-lg-6 text-center text-lg-end overflow-hidden">
@@ -121,7 +121,7 @@ const Home = () => {
                             </div>
                             <div className="col-lg-6">
                                 <h5 className="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
-                                <h1 className="mb-4">Welcome to <i className="fa fa-utensils text-primary me-2"></i>Restoran</h1>
+                                <h1 className="mb-4 m">Welcome to <i className="fa fa-utensils text-primary me-2"></i>Restoran</h1>
                                 <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
                                 <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
                                 <div className="row g-4 mb-4">

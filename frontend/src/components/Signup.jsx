@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import axios from 'axios';
+import axios from 'axios'; 
 
 export const Signup = () => {
     const [formData, setFormData] = useState({
@@ -100,6 +100,7 @@ export const Signup = () => {
                     <Button variant="primary" type="submit" id='btn'>
                         Sign Up
                     </Button>
+                    <h3>Already a user? <Link to="/login">login</Link></h3>
                 </Form>
                 {showPopup && (
                     <div className="popup">
