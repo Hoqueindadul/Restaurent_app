@@ -3,6 +3,8 @@
   --primary: #FEA116;
   --light: #F1F8FF;
   --dark: #0F172B;
+  --tittle: Nunito, sans-serif;
+  --para: Heebo, sans-serif;
 }
 
 .ff-secondary {
@@ -16,6 +18,7 @@
 .fw-semi-bold {
   font-weight: 700;
 }
+
 
 .back-to-top {
   position: fixed;
@@ -171,7 +174,14 @@
 .hero-header img {
   animation: imgRotate 50s linear infinite;
 }
-
+.hero-header h1{
+  font-weight: 800;
+  font-family: var(--tittle);
+  font-size: 4rem;
+}
+.hero-header p{
+  font-family: var(--para);
+}
 @keyframes imgRotate { 
   100% { 
       transform: rotate(360deg); 
@@ -189,7 +199,15 @@
   position: relative;
   display: inline-block;
 }
+.mb-4.m{
+  font-family: var(--tittle);
+  font-size: 40px;
+  font-weight: bold;
+}
 
+.fa-utensils:before {
+  color: #ffc107;
+}
 .section-title::before {
   position: absolute;
   content: "";
@@ -210,11 +228,13 @@
   right: -55px;
   margin-top: -1px;
   background: var(--primary);
+  
 }
 
 .section-title.text-start::before,
 .section-title.text-end::after {
   display: none;
+  
 }
 
 /* Hero Section Title End*/
@@ -223,14 +243,26 @@
 .service-item {
   box-shadow: 0 0 45px rgba(0, 0, 0, .08);
   transition: .5s;
-}
 
+}
+.service-item{
+  color: #ffc107;
+}
+.service-item p{
+  color: #666565;
+  font-family: var(--para);
+}
+.service-item h5{
+  color: #0F172B;
+  font-family: var(--font);
+  font-weight: bold;
+}
 .service-item:hover {
   background: var(--primary);
 }
 
 .service-item * {
-  transition: .5s;
+  transition: .3s;
 }
 
 .service-item:hover * {
@@ -240,9 +272,14 @@
 /* Service end */
 
 /* Food Menu */
-.nav-pills .nav-item .active {
+.nav-pills .nav-item .active{
   border-bottom: 2px solid var(--primary);
+  
 }
+.nav-pills .nav-item .text-start{
+  color: #ffc107;
+}
+
 
 /* Food menu end */
 
@@ -271,6 +308,12 @@
 
 /* Team end */
 
+/* About us */
+
+.text-start .mb-4 .me-2{
+  color: #ffc107;
+}
+/* End About us */
 /* signup page design start */
 
 #nab .navbar {
