@@ -473,6 +473,7 @@
   border: 1px solid #FFFFFF;
   border-radius: 35px;
   transition: .3s;
+  text-decoration: none;
 }
 
 .footer .btn.btn-social:hover {
@@ -489,6 +490,7 @@
   font-weight: normal;
   text-transform: capitalize;
   transition: .3s;
+  text-decoration: none;
 }
 
 .footer .btn.btn-link::before {

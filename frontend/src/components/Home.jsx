@@ -932,22 +932,22 @@ const Home = () => {
                         <div className="row g-5">
                             <div className="col-lg-3 col-md-6">
                                 <h4 className="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
-                                <a className="btn btn-link" href="">About Us</a>
-                                <a className="btn btn-link" href="">Contact Us</a>
-                                <a className="btn btn-link" href="">Reservation</a>
-                                <a className="btn btn-link" href="">Privacy Policy</a>
-                                <a className="btn btn-link" href="">Terms & Condition</a>
+                                <Link to="/about" className="btn btn-link">About Us</Link>
+                                <Link to="/contact" className="btn btn-link">Contact Us</Link>
+                                <Link to="" className="btn btn-link">Reservation</Link>
+                                <Link to="" className="btn btn-link">Privacy Policy</Link>
+                                <Link to="" className="btn btn-link">Terms & Condition</Link>
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <h4 className="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
                                 <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
                                 <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                                <p className="mb-2"><i className="fa fa-envelope me-3"></i>info@example.com</p>
+                                <p className="mb-2"><i className="fa fa-envelope me-3"></i>info@restoindia.com</p>
                                 <div className="d-flex pt-2">
-                                    <a className="btn btn-outline-light btn-social" href=""><i className="fab fa-twitter"></i></a>
-                                    <a className="btn btn-outline-light btn-social" href=""><i className="fab fa-facebook-f"></i></a>
-                                    <a className="btn btn-outline-light btn-social" href=""><i className="fab fa-youtube"></i></a>
-                                    <a className="btn btn-outline-light btn-social" href=""><i className="fab fa-linkedin-in"></i></a>
+                                    <Link to="" className="btn btn-outline-light btn-social"><i className="fab fa-twitter"></i></Link>
+                                    <Link to="" className="btn btn-outline-light btn-social"><i className="fab fa-facebook-f"></i></Link>
+                                    <Link to="" className="btn btn-outline-light btn-social"><i className="fab fa-youtube"></i></Link>
+                                    <Link to="" className="btn btn-outline-light btn-social"><i className="fab fa-linkedin-in"></i></Link>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6">
@@ -971,15 +971,15 @@ const Home = () => {
                         <div className="copyright">
                             <div className="row">
                                 <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                                    &copy; <a className="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-                                    Designed By <a className="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                                    &copy; <a className="border-bottom" href="#">restoindia</a>, All Right Reserved.
+                                    Designed By <Link to="restoindia.com" className="border-bottom">RestoIndia</Link>
                                 </div>
                                 <div className="col-md-6 text-center text-md-end">
                                     <div className="footer-menu">
-                                        <a href="">Home</a>
-                                        <a href="">Cookies</a>
-                                        <a href="">Help</a>
-                                        <a href="">FQAs</a>
+                                        <Link to="/home">Home</Link>
+                                        <Link to="/cookies">Cookies</Link>
+                                        <Link to="/help">Help</Link>
+                                        <Link to="/faq">FQAs</Link>
                                     </div>
                                 </div>
                             </div>
