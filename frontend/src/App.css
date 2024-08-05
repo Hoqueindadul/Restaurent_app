@@ -48,7 +48,7 @@
 .btn {
   font-family: 'Nunito', sans-serif;
   font-weight: 500;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   transition: .5s;
 }
 
@@ -194,7 +194,7 @@
 
 /* Hero Header Emd */
 
-/* Hero Section Title Start*/
+/* Hero Section Title Start and about us section */
 .section-title {
   position: relative;
   display: inline-block;
@@ -237,16 +237,24 @@
   
 }
 
-/* Hero Section Title End*/
+.col-sm-6 .d-flex .display-5{
+  font-family: var(--tittle);
+  font-weight: 800;
+}
+.col-sm-6 .d-flex{
+  color: #FEA116;
+}
+.col-sm-6 .d-flex .ps-4{
+  color: #000;
+}
+/* Hero Section Title End and about section end */
 
 /* Service Start */
 .service-item {
   box-shadow: 0 0 45px rgba(0, 0, 0, .08);
   transition: .5s;
-
-}
-.service-item{
   color: #ffc107;
+
 }
 .service-item p{
   color: #666565;
@@ -264,9 +272,9 @@
 .service-item * {
   transition: .3s;
 }
-
-.service-item:hover * {
-  color: var(--light) !important;
+.service-item:hover *{
+  color: var(--light) 
+  !important
 }
 
 /* Service end */
@@ -279,7 +287,23 @@
 .nav-pills .nav-item .text-start{
   color: #ffc107;
 }
+.nav-item .d-flex  small{
+  color: #666565;
+}
 
+
+.nav-item .d-flex h6 {
+    color: #464444;
+    text-decoration: none;
+    font-family: var(--tittle);
+    font-weight: 800;
+
+}
+.d-flex .price{
+  color: #ffc107;
+  font-family: var(--tittle);
+  font-weight: 800;
+}
 
 /* Food menu end */
 
@@ -314,12 +338,12 @@
   color: #ffc107;
 }
 /* End About us */
-/* signup page design start */
+
+/* signup and signin page design start */
 
 #nab .navbar {
   background-color: #333; /* Replace with your desired color */
 }
-
 
 .form-container {
   display: flex;
@@ -333,6 +357,7 @@
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
+  font-family: var(--para);
 }
 
 #frm {
@@ -341,13 +366,13 @@
   border-radius: 10px;
   min-height: 36vh;
   background-color: var(--dark);
-  box-shadow: -1px 1px 5px 3px var(--primary);
+  box-shadow: -1px 1px 5px 3px rgba(86, 163, 8, 0.75);
   width: 30%;
 }
 
 .heading {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--tittle);
   font-weight: 700;
 }
 
@@ -372,6 +397,9 @@
   border-radius: 5px;
   background-color: #fff;
   color: #000;
+  border: 2px solid rgba(62, 66, 51, 0.75);
+  border-radius: 10px;
+  box-shadow: -1px 1px 5px 3px rgba(112, 110, 110, 0.75);
 }
 
 #btn {
@@ -383,14 +411,15 @@
   margin: auto;
   align-items: center;
   margin-top: 14px;
-  padding: 10px;
+  padding: 10px 15px;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  
 }
 
 #btn:hover {
-  background-color: rgba(15, 23, 43, 0.75);
+  background-color: rgba(54, 56, 47, 0.75);
 }
 
 @media (max-width: 600px) {
@@ -421,7 +450,16 @@
   z-index: 1000;
 }
 
-/* Sign up page design end */
+.form-container .exit{
+  font-size: 15px;
+  text-align: center;
+  padding-top: 12px;
+  font-family: var(--para);
+}
+.link{
+  text-decoration: none;
+}
+/* Sign up and Sign inpage design end */
 
 /*** Footer ***/
 .footer .btn.btn-social {

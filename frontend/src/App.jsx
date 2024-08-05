@@ -5,8 +5,9 @@ import About from "./components/About";
 import Service from "./components/Service";
 import Menu from "./components/Menu";
 import Signup from "./components/Signup";
-import './App.css'
+import Login from "./components/Login";
 import Contact from "./components/Contact";
+import './App.css'
 // hello how
 // dfjlasjd
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
                 <Route path="/menu" element={<Menu/>} />
                 <Route path="/contact" element={<Contact/>} />
                 <Route path="/signup" element={<Signup/>} />
+                <Route path="/login" element={<Login/>} />
             </Routes>
         </BrowserRouter>
     </>

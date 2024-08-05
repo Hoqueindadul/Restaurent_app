@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -14,7 +14,7 @@ export const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPopup, setShowPopup] = useState(false);
-
+    const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -28,7 +28,9 @@ export const Signup = () => {
                 setUsername('');
                 setEmail('');
                 setPassword('');
-
+                // if(response.data.status){
+                //     navigate('/login')
+                // }
                 // Show success popup
                 setShowPopup(true);
                 // Hide popup after 3 seconds
@@ -58,7 +60,7 @@ export const Signup = () => {
                             <Link to="/menu" className="nav-item nav-link">Menu</Link>
                             <Link to="/contact" className="nav-item nav-link">Contact</Link>
                         </div>
-                        <a href="" className="btn btn-primary py-2 px-4">Sign Up</a>
+                        <Link to="/login" className="btn btn-primary py-2 px-4">Login</Link>
                     </div>
                 </nav>
             </div>
@@ -100,7 +102,7 @@ export const Signup = () => {
                     <Button variant="primary" type="submit" id='btn'>
                         Sign Up
                     </Button>
-                    <h3>Already a user? <Link to="/login">login</Link></h3>
+                    <h3 className='exit'>Already have an account? <Link to="/login" className='link'>Sign in</Link></h3>
                 </Form>
                 {showPopup && (
                     <div className="popup">
