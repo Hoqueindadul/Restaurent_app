@@ -36,13 +36,13 @@ router.post('/signup', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { username, password } = req.body;
 
-        if (!email || !password) {
+        if (!username || !password) {
             return res.status(400).json({ message: "Email and password are required." });
         }
 
-        const user = await User.findOne({ email });
+        const user = await User.findOne({ username });
         if (!user) {
             return res.status(400).json({ message: "User is not registered." });
         }
@@ -56,6 +56,7 @@ router.post('/login', async (req, res) => {
             { username: user.username },
             process.env.KEY,
             { expiresIn: "1h" }
+            
         );
 
         res.cookie('token', token, { httpOnly: true, maxAge: 3600000 });

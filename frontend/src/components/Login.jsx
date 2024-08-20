@@ -4,10 +4,13 @@ import Form from 'react-bootstrap/Form';
 import React, { useState } from 'react';
 import Axios from 'axios';
 
+
 export const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [loggedInUsername, setLoggedInUsername] = useState(''); // State to store the logged-in username
     const [error, setError] = useState(''); // State to store error message
+    const [showPopup, setShowPopup] = useState(false);
     const navigate = useNavigate();
     Axios.defaults.withCredentials = true;
 
@@ -16,18 +19,27 @@ export const Login = () => {
         setError('');
 
         Axios.post('http://localhost:5001/auth/login', {
-            email: username, // Ensure this matches the backend expectation
+            username,
             password
         })
         .then(response => {
             console.log(response.data);
-            setUsername('');
-            setPassword('');
+
             if (response.data.status) {
-                navigate('/home');
+                // Set the logged-in username
+                setLoggedInUsername(username);
+                
+                // Show success popup
+                setShowPopup(true);
+                // Hide popup after 3 seconds
+                setTimeout(() => setShowPopup(false), 3000);
+                // navigate('/home');
             } else {
                 setError(response.data.message || 'Login failed');
             }
+
+            setUsername('');
+            setPassword('');
         })
         .catch(error => {
             console.error('There was an error!', error);
@@ -60,6 +72,7 @@ export const Login = () => {
                             <Link to="/menu" className="nav-item nav-link">Menu</Link>
                             <Link to="/contact" className="nav-item nav-link">Contact</Link>
                         </div>
+                        {loggedInUsername && <h1 className="text-white">Welcome, {loggedInUsername}!</h1>}
                         <Link to="/signup" className="btn btn-primary py-2 px-4">Sign Up</Link>
                     </div>
                 </nav>
@@ -94,6 +107,11 @@ export const Login = () => {
                     </Button>
                     <h3 className='exit'>Don't have an account? <Link to="/signup" className='link'>Sign up</Link></h3>
                 </Form>
+                {showPopup && (
+                    <div className="popup">
+                        Signup successful!
+                    </div>
+                )}
             </div>
         </div>
     );
