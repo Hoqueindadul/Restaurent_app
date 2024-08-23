@@ -104,6 +104,20 @@
 .navbar-dark{
   background-color: #000;
 }
+.dropdown{
+  color: white;
+  background-color: #FEA116;
+  border-radius: 100%;
+  padding: 8px;
+}
+.dropdown-menu.show {
+  display: block;
+  background-color: var(--light);
+}
+ .dropdown-item{
+  
+  font-weight: 800;
+}
 .sticky-top.navbar-dark .navbar-nav .nav-link {
   padding: 20px 0;
 }

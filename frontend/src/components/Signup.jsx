@@ -2,7 +2,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import axios from 'axios'; 
+import axios from 'axios';
+import Nav from './Nav';
 
 export const Signup = () => {
     const [formData, setFormData] = useState({
@@ -44,27 +45,7 @@ export const Signup = () => {
     return (
         <div className="container-xxl bg-white p-0">
             {/* Navbar */}
-            <div className="container-xxl position-relative p-0 " id='nab'>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-4 px-lg-5 py-3 py-lg-0">
-                    <Link to="/" className="navbar-brand p-0">
-                        <img src="/logo.png" alt="Logo" />
-                    </Link>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span className="fa fa-bars"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarCollapse">
-                        <div className="navbar-nav ms-auto py-0 pe-4">
-                            <Link to="/" className="nav-item nav-link">Home</Link>
-                            <Link to="/about" className="nav-item nav-link">About</Link>
-                            <Link to="/service" className="nav-item nav-link active">Service</Link>
-                            <Link to="/menu" className="nav-item nav-link">Menu</Link>
-                            <Link to="/contact" className="nav-item nav-link">Contact</Link>
-                        </div>
-                        <Link to="/login" className="btn btn-primary py-2 px-4">Login</Link>
-                    </div>
-                </nav>
-            </div>
-
+            <Nav />
             {/* Form structure */}
             <div className='form-container'>
                 <Form id="frm" onSubmit={handleSubmit}>

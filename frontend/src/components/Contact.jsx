@@ -1,6 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+import Nav from './Nav';
 
 const Contact = () => {
     return (
@@ -8,33 +9,7 @@ const Contact = () => {
             <div className="container-xxl bg-white p-0">
 
                 {/* Navbar & Hero Start */}
-                <div className="container-xxl position-relative p-0">
-                    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-4 px-lg-5 py-3 py-lg-0">
-                        <Link to="/" className="navbar-brand p-0">
-                            <img src="/logo.png" alt="Logo" />
-                        </Link>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                            <span className="fa fa-bars"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarCollapse">
-                            <div className="navbar-nav ms-auto py-0 pe-4">
-                                <Link to="/" className="nav-item nav-link active">Home</Link>
-                                <Link to="/about" className="nav-item nav-link">About</Link>
-                                <Link to="/service" className="nav-item nav-link">Service</Link>
-                                <Link to="/menu" className="nav-item nav-link">Menu</Link>
-                                <Link to="/contact" className="nav-item nav-link active">Contact</Link>
-                                {/* <div className="nav-item dropdown">
-                                    <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                                    <div className="dropdown-menu m-0">
-                                        <a href="booking.html" className="dropdown-item">Booking</a>
-                                        <a href="team.html" className="dropdown-item">Our Team</a>
-                                        <a href="testimonial.html" className="dropdown-item">Testimonial</a>
-                                    </div>
-                                </div> */}
-                            </div>
-                            <Link to="/signup" className="btn btn-primary py-2 px-4">Sign Up</Link>
-                        </div>
-                    </nav>
+                <Nav />
 
                     <div className="container-xxl py-5 bg-dark hero-header mb-5">
                         <div className="container text-center my-5 pt-5 pb-4">
@@ -182,7 +157,7 @@ const Contact = () => {
                     </div>
                 </div>
                 {/* Footer End */}
-            </div>
+            
 
         </>
     )
